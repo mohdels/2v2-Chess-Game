@@ -7,12 +7,11 @@ public class Game {
     
 
     public Game(){
-        // todo: write a constructor that initializes the game with a new board
+        
     	b = new Board();
     	currentTurn = Side.WHITE;
     	
 
-        // hint: you are also responsible for tracking whose turn it is
     }
 
      public static String getName() {
@@ -66,21 +65,7 @@ public class Game {
 
    
    
-    /**
-     * This method is provided to you in order to help with canMove().
-     *
-     * In chess, no piece except the knight can "move through" or "hop over" a piece that's in its way
-     *
-     * This method checks that there are no pieces along the path from (x,y) to (destX,destY).
-     * Note that a "path" is only defined if (x,y) and (destX,destY) are on the same row, column, or diagonal.
-     * If the requested path is undefined, the method throws an exception.
-     *
-     * If the path is defined and no piece is found along the path, the method returns true.
-     *
-     * Don't worry about how this method works or tests and edge cases for it, we will
-     * grade you assuming you keep it exactly as provided and use it as a part of your
-     * canMove() method.
-     */
+   
      private boolean isVisible(int x, int y, int destX, int destY) {
         int diffX = destX - x;
         int diffY = destY - y;
